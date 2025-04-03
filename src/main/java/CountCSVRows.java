@@ -10,7 +10,7 @@ public class CountCSVRows {
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             List<String[]> records = reader.readAll();
             System.out.println("Total records: " + (records.size() - 1)); // Excluding header
-        } catch (IOException | CsvException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

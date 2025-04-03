@@ -18,16 +18,16 @@ class Student {
 }
 
 public class CSVToJavaObjects {
-    public static void main(String[] args) {
-        String filePath = "students.csv";
+    public static void main(String[] args) throws Exception{
+        String filePath = "D:\\BridgeLabz Development\\CSVfile_handling\\students.csv";
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             List<String[]> records = reader.readAll();
             List<Student> students = new ArrayList<>();
             for (String[] row : records.subList(1, records.size())) {
-                students.add(new Student(row[0], row[1], Integer.parseInt(row[2]), Integer.parseInt(row[3])));
+                students.add(new Student(Integer.parseInt(row[0]), row[1], row[2], Integer.parseInt(row[3])));
             }
             students.forEach(System.out::println);
-        } catch (IOException | CsvException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

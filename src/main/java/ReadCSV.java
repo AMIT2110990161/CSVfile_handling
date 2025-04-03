@@ -3,7 +3,7 @@ import com.opencsv.*;
 
 public class ReadCSV {
     public static void main(String[] args) throws Exception {
-        String filePath = "D:\\BridgeLabz Development\\CSVfile_handling\\students.csv";
+        String filePath = "D:\\BridgeLabz Development\\CSVfile_handling\\students.csv ";
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
             String[] values;
             while ((values = reader.readNext()) != null) {

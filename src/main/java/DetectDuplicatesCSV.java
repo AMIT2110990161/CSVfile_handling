@@ -5,7 +5,7 @@ import java.util.*;
 
 public class DetectDuplicatesCSV {
     public static void main(String[] args) {
-        String filePath = "employees.csv";
+        String filePath = "D:\\BridgeLabz Development\\CSVfile_handling\\employees.csv";
         Set<String> uniqueIDs = new HashSet<>();
         Set<String[]> duplicates = new HashSet<>();
 

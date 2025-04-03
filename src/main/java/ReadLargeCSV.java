@@ -2,8 +2,8 @@ import java.io.*;
 import com.opencsv.*;
 
 public class ReadLargeCSV {
-    public static void main(String[] args) {
-        String filePath = "large_data.csv";
+    public static void main(String[] args) throws Exception {
+        String filePath = "D:\\BridgeLabz Development\\CSVfile_handling\\employees.csv";
         int chunkSize = 100;
         int count = 0;
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {
@@ -15,7 +15,7 @@ public class ReadLargeCSV {
                 }
             }
             System.out.println("Total records processed: " + count);
-        } catch (IOException | CsvException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

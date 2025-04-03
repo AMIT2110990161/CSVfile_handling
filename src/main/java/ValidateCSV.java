@@ -6,7 +6,7 @@ import java.util.regex.*;
 
 public class ValidateCSV {
     public static void main(String[] args) {
-        String filePath = "employees.csv";
+        String filePath = "D:\\BridgeLabz Development\\CSVfile_handling\\employees.csv";
         Pattern emailPattern = Pattern.compile("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
         Pattern phonePattern = Pattern.compile("^\\d{10}$");
         try (CSVReader reader = new CSVReader(new FileReader(filePath))) {

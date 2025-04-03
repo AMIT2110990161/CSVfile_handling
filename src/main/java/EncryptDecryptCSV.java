@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.Base64;
 
 public class EncryptDecryptCSV {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         String filePath = "employees.csv";
         String encryptedFile = "encrypted_employees.csv";
         String decryptedFile = "decrypted_employees.csv";
